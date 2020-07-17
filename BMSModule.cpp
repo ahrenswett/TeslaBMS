@@ -345,5 +345,6 @@ void BMSModule::balanceCells()
 uint8_t BMSModule::getBalancingState(int cell)
 {
     if (cell < 0 || cell > 5) return 0;
+    cout << cell +" = "+ cellVolt;
     return balanceState[cell];
 }

@@ -1,3 +1,7 @@
+
+
+
+
 #if defined (__arm__) && defined (__SAM3X8E__)
 #include <chip.h>
 #endif
@@ -8,7 +12,8 @@
 #include "BMSModuleManager.h"
 #include "SystemIO.h"
 #include <due_can.h>
-#include <due_wire.h>
+//#include <due_wire.h>
+#include <Wire.h>
 #include <Wire_EEPROM.h>
 
 //#define BMS_BAUD  612500
@@ -134,4 +139,3 @@ void loop()
         bms.processCANMsg(incoming);
     }
 }
-

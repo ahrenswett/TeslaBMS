@@ -71,7 +71,7 @@ void BMSModuleManager::setupBoards()
                             if (buff[0] == (0x81) && buff[1] == REG_ADDR_CTRL && buff[2] == (y + 0x80)) 
                             {
                                 modules[y].setExists(true);
-                                numFoundModules++;
+                                numFoundModules++;p
                                 Logger::debug("Address assigned");
                             }
                         }
