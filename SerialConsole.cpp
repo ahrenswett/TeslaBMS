@@ -24,8 +24,7 @@
 
  */
 
-//#include <due_wire.h>
-#include <Wire.h>
+#include <due_wire.h>
 #include <Wire_EEPROM.h>
 #include "SerialConsole.h"
 #include "Logger.h"
