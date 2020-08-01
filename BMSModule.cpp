@@ -2,14 +2,18 @@
 #include "BMSModule.h"
 #include "BMSUtil.h"
 #include "Logger.h"
+#include "tesla_bms.pb.h"
 
 extern EEPROMSettings settings;
 
+//THis is where I belive I may need to add a message builder. 
 BMSModule::BMSModule()
 {
+    //sets up the cells in the module
     for (int i = 0; i < 6; i++)
     {
         cellVolt[i] = 0.0f;
+        
         lowestCellVolt[i] = 5.0f;
         highestCellVolt[i] = 0.0f;
         balanceState[i] = 0;
@@ -345,5 +349,6 @@ void BMSModule::balanceCells()
 uint8_t BMSModule::getBalancingState(int cell)
 {
     if (cell < 0 || cell > 5) return 0;
+    cout << cell +" = "+ cellVolt;
     return balanceState[cell];
 }
